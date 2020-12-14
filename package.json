@@ -2,7 +2,7 @@
   "name": "insight-api-komodo",
   "description": "A Komodo blockchain REST and web socket API service for Bitcore Node.",
   "version": "0.4.3",
-  "repository": "git-ssh://git@github.com:DeckerSu/insight-api-komodo.git",
+  "repository": "git-ssh://git@github.com:marmarachain/insight-api-marmara.git",
   "contributors": [
     {
       "name": "Gustavo Cortez",
@@ -41,11 +41,29 @@
       "email": "jack@z.cash"
     }
   ],
-  "bugs": {
-    "url": "https://github.com/supernetorg/insight-api-komodo/issues"
+  "dependencies": {
+    "async": "^2.6.2",
+    "bitcore-lib-komodo": "git+https://git@github.com/DeckerSU/bitcore-lib-komodo.git",
+    "bitcore-message-komodo": "git+https://git@github.com/DeckerSU/bitcore-message-komodo.git",
+    "body-parser": "^1.13.3",
+    "compression": "^1.6.1",
+    "lodash": "^2.4.1",
+    "lru-cache": "^4.0.1",
+    "morgan": "^1.7.0",
+    "request": "^2.64.0"
+  },
+  "deprecated": false,
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5",
+    "proxyquire": "^1.7.2",
+    "should": "^8.3.1",
+    "sinon": "^1.10.3"
+  },
+  "engines": {
+    "node": ">=0.12.0"
   },
   "homepage": "https://github.com/supernetorg/insight-api-komodo",
-  "license": "MIT",
   "keywords": [
     "insight",
     "insight api",
@@ -55,30 +73,15 @@
     "json",
     "bitcore"
   ],
-  "engines": {
-    "node": ">=0.12.0"
+  "license": "MIT",
+  "main": "lib",
+  "name": "insight-api-komodo",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/supernetorg/insight-api-komodo.git"
   },
   "scripts": {
     "test": "NODE_ENV=test mocha -R spec --recursive"
   },
-  "main": "lib",
-  "bitcoreNode": "lib",
-  "dependencies": {
-    "async": "^2.6.2",
-    "bitcore-lib-komodo": "git+https://git@github.com/DeckerSU/bitcore-lib-komodo",
-    "bitcore-message-komodo": "git+https://git@github.com/DeckerSU/bitcore-message-komodo",
-    "body-parser": "^1.13.3",
-    "compression": "^1.6.1",
-    "lodash": "^2.4.1",
-    "lru-cache": "^4.0.1",
-    "morgan": "^1.7.0",
-    "request": "^2.64.0"
-  },
-  "devDependencies": {
-    "chai": "^3.5.0",
-    "mocha": "^2.4.5",
-    "proxyquire": "^1.7.2",
-    "should": "^8.3.1",
-    "sinon": "^1.10.3"
-  }
+  "version": "0.4.3"
 }
